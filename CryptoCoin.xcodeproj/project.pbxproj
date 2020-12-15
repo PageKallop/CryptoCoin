@@ -16,6 +16,7 @@
 		C016494825880DB5002EDBC3 /* CryptoCoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C016494725880DB5002EDBC3 /* CryptoCoinTests.swift */; };
 		C016495325880DB5002EDBC3 /* CryptoCoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C016495225880DB5002EDBC3 /* CryptoCoinUITests.swift */; };
 		C08FFF6F25885E5C001AFB94 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FFF6E25885E5C001AFB94 /* CoinManager.swift */; };
+		C0D3731A25892FF40029D83D /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3731925892FF40029D83D /* CoinData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C016495225880DB5002EDBC3 /* CryptoCoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCoinUITests.swift; sourceTree = "<group>"; };
 		C016495425880DB5002EDBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C08FFF6E25885E5C001AFB94 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		C0D3731925892FF40029D83D /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				C016493025880DB4002EDBC3 /* AppDelegate.swift */,
 				C016493225880DB4002EDBC3 /* SceneDelegate.swift */,
 				C016493425880DB4002EDBC3 /* ViewController.swift */,
+				C0D3731925892FF40029D83D /* CoinData.swift */,
 				C08FFF6E25885E5C001AFB94 /* CoinManager.swift */,
 				C016493625880DB4002EDBC3 /* Main.storyboard */,
 				C016493925880DB5002EDBC3 /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			files = (
 				C08FFF6F25885E5C001AFB94 /* CoinManager.swift in Sources */,
 				C016493525880DB4002EDBC3 /* ViewController.swift in Sources */,
+				C0D3731A25892FF40029D83D /* CoinData.swift in Sources */,
 				C016493125880DB4002EDBC3 /* AppDelegate.swift in Sources */,
 				C016493325880DB4002EDBC3 /* SceneDelegate.swift in Sources */,
 			);

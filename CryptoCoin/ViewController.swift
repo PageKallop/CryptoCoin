@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+  // creates coinManager object
     var coinManager = CoinManager()
 
    
@@ -21,12 +22,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // Allows th picker to be updated by vc
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
     }
 
-    
+  
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         
         
