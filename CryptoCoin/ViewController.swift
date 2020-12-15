@@ -22,6 +22,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        coinManager.delegate = self 
+        
         // Allows th picker to be updated by vc
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
@@ -56,9 +58,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 extension ViewController: CoinManagerDelegate {
     func didUpdateCurrency(currencyInfo: CoinModel) {
        
+        DispatchQueue.main.async {
+            self.currencyLabel.text = currencyInfo.currencyType
+            self.coinLabel.text = currencyInfo.currencyPriceString
+        }
         
-        currencyLabel.text = currencyInfo.currencyType
-        coinLabel.text = currencyInfo.currencyPriceString
     }
     
     
