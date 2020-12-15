@@ -78,20 +78,16 @@
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otW-1s-lhF">
-                                <rect key="frame" x="0.0" y="581" width="414" height="217"/>
+                                <rect key="frame" x="47" y="646" width="320" height="216"/>
                             </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="0.69443558670000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="otW-1s-lhF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="581" id="9A9-nz-osT"/>
-                            <constraint firstItem="dd9-1e-S9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="BH7-41-m0l"/>
-                            <constraint firstItem="otW-1s-lhF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DuO-or-zCG"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="dd9-1e-S9E" secondAttribute="bottom" constant="547" id="ERR-Xk-GJV"/>
-                            <constraint firstItem="otW-1s-lhF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="I13-ug-zOJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dd9-1e-S9E" secondAttribute="trailing" constant="20" id="MCy-cl-kDa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="otW-1s-lhF" secondAttribute="bottom" constant="64" id="p6B-I0-VfS"/>
-                            <constraint firstItem="dd9-1e-S9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qxc-eY-aW3"/>
+                            <constraint firstItem="dd9-1e-S9E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-251.5" id="XEq-Be-boJ"/>
+                            <constraint firstItem="dd9-1e-S9E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gAY-kH-wv9"/>
+                            <constraint firstItem="otW-1s-lhF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="306" id="lSw-23-zri"/>
+                            <constraint firstItem="otW-1s-lhF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vCW-kx-p2u"/>
                         </constraints>
                     </view>
                     <connections>

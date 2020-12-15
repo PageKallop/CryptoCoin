@@ -7,8 +7,14 @@
 
 import Foundation
 
+protocol CoinManagerDelegate {
+    func didUpdateCurrency(currencyInfo: CoinModel)
+}
+
 
 struct CoinManager {
+    
+    var delegate: CoinManagerDelegate?
     
     let coinPriceURL = "https://rest.coinapi.io/v1/exchangerate/BTC/"
     
@@ -21,40 +27,44 @@ struct CoinManager {
     
     //Creates URL String that allows the input of selected currency
     func getCoinPrice(for currency: String){
-        
+       
         let urlString = "\(coinPriceURL)\(currency)\(apiKey)"
         print(urlString)
-    }
-    
-    //Making api request
-    func performRequest(urlString: String) {
+  
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, responce, error) in
                 if error != nil {
-                    print(error!)
-                    return
-                }
+                print(error!)
+                return
+            }
                 if let safeData = data {
-                    self.parseJSON(coinData: safeData)
+                    if let currencyInfo = self.parseJSON(coinData: safeData) {
+                        self.delegate?.didUpdateCurrency(currencyInfo: currencyInfo)
+                    }
                 }
             }
             task.resume()
         }
         
     }
-    //Parse JSON to display certain parts of data 
-    func parseJSON(coinData: Data) {
-        let decoder = JSONDecoder()
-        do {
-            let decodedData = try decoder.decode(CoinData.self, from: coinData)
-            
-            let lastPrice = decodedData.rate
-            
-            print(lastPrice)
-        } catch {
-            print(error)
-            
+        func parseJSON(coinData: Data) -> CoinModel? {
+            let decoder = JSONDecoder()
+            do {
+                let decodedData = try decoder.decode(CoinData.self, from: coinData)
+                let coinPrice = decodedData.rate
+                let currencyName = decodedData.asset_id_quote
+                
+                let currencyInfo = CoinModel(coinPrice: coinPrice, currencyType: currencyName)
+                print(currencyInfo.coinPrice)
+                return currencyInfo
+                
+            } catch {
+                print(error)
+                return nil
+            }
         }
-    }
+
+   
 }
+

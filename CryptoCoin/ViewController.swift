@@ -53,3 +53,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
 }
 
+extension ViewController: CoinManagerDelegate {
+    func didUpdateCurrency(currencyInfo: CoinModel) {
+       
+        
+        currencyLabel.text = currencyInfo.currencyType
+        coinLabel.text = currencyInfo.currencyPriceString
+    }
+    
+    
+    
+    
+}
+
